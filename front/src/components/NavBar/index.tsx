@@ -11,7 +11,7 @@ export default function NavBar() {
     const [isOpen, setStatus] = useState(false);
 
     return <>
-        <nav className={`bg-white w-screen ${isOpen ? 'h-44' : 'h-14'} transition-all duration-100`}>
+        <nav className={`bg-white w-screen ${isOpen ? 'h-40' : 'h-14'} transition-all duration-100`}>
             <div className="grid sm:grid-cols-6 grid-cols-5 w-full items-center justify-start p-1 container mx-auto">
                 <div className="flex items-center justify-center space-x-4">
                     <Link href="#" onClick={() => { setStatus(!isOpen) }}>
@@ -33,25 +33,25 @@ export default function NavBar() {
                     </Link>
                 </div>
             </div>
-            <div className={`grid grid-cols-6 w-full mx-auto container ${!isOpen && 'hidden'} text-black`}>
-                <ul className="flex flex-col items-center justify-center">
+            <div className={`grid sm:grid-cols-6 grid-cols-5 w-full mx-auto container font-bold ${!isOpen && 'hidden'} text-black`}>
+                <ul className="flex flex-col items-center justify-center text-standard">
                     <li>
-                        <Link href="#">
+                        <Link href="#" className="transition-colors hover:text-standard-hover">
                             Teste
                         </Link>
                     </li>
                     <li>
-                        <Link href="#">
+                        <Link href="#" className="transition-colors hover:text-standard-hover">
                             Teste
                         </Link>
                     </li>
                     <li>
-                        <Link href="#">
+                        <Link href="#" className="transition-colors hover:text-standard-hover">
                             Teste
                         </Link>
                     </li>
                     <li>
-                        <Link href="#">
+                        <Link href="#" className="transition-colors hover:text-standard-hover">
                             Teste
                         </Link>
                     </li>
